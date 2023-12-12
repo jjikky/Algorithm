@@ -1,0 +1,12 @@
+{
+  "name": "algorithm",
+  "version": "1.0.0",
+  "description": "This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node js/template.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
