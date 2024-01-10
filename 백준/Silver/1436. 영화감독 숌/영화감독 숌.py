@@ -1,0 +1,9 @@
+n=int(input())
+cnt=1
+num=666
+while(cnt<n):
+    num+=1
+    if(str(num).count("666")>=1):
+        cnt+=1
+    if(cnt==n):break
+print(num)
