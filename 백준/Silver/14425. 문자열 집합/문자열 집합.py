@@ -2,6 +2,6 @@ import sys
 input = sys.stdin.readline
 
 n,m=map(int,input().split())
-
-s = [input() for i in range(n)]
-print(sum([1 for i in range(m) if input() in s]))
+a = sys.stdin.read().split('\n')
+s = set(a[:n])
+print(sum([i in s for i in a[n:]]))
