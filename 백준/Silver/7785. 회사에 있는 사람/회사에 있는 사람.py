@@ -1,4 +1,7 @@
 from collections import Counter
+import sys
+
+input = sys.stdin.readline
 user=[]
 for _ in range(int(input())):
     user.append(input().split()[0])
