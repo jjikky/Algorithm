@@ -3,10 +3,12 @@ import sys
 input = sys.stdin.readline
 n,m = map(int,input().split())
 
-arr = [input().strip('\n') for x in range(n)]
+dict={}
+
+for i in range(1,n+1):
+    a = input().strip()
+    dict[str(i)]=a
+    dict[a]=i
 for i in range(m):
-    q = input().strip("\n")
-    if q.isdigit():
-        print(arr[int(q)-1])
-    else:
-        print(arr.index(q)+1)
+    q = input().strip()
+    print(dict[q])
