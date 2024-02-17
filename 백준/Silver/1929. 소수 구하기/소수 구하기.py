@@ -1,13 +1,17 @@
+import sys
 import math
-m,n = map(int,input().split())
+m,n = map(int,input().split(" "))
 
-def isPrime(num):
-    for i in range(2,int(math.sqrt(num))+1):
-        if num%i==0:
-            return False
-    return True
+l = [True for i in range(n + 1)]
 
-for i in range(m,n+1):
-    if(i==1):continue
-    if isPrime(i):
-        print(i)
+for i in range(2, int(math.sqrt(n)) + 1):
+    if l[i] == True:
+        j = 2
+        while i * j <= n:
+            l[i * j] = False
+            j += 1
+
+for i in range(m, n + 1):
+    if l[i]:
+        if i != 1:
+            print(i)
