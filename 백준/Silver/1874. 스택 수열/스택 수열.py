@@ -1,8 +1,6 @@
 import sys
-n = int(sys.stdin.readline())
-arr=[]
-for i in range(n):
-    arr.append(int(input()))
+n, *arr = map(int, sys.stdin.buffer.read().splitlines())
+
 stack=[]
 arr2=[]
 result=[]
@@ -17,7 +15,6 @@ for i in range(n):
         result.append("-")
 
 if arr==arr2:
-    for i in result:
-        print(i)
+    print('\n'.join(result))
 else:
     print("NO")
