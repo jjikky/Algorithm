@@ -1,17 +1,17 @@
+import sys
+
+input = sys.stdin.readline
+
 n=int(input())
-n_arr = list(map(int,input().split()))
+num_dict = {}
+n_arr = set(map(int,input().split()))
+
+for num in n_arr:
+    num_dict[num]=True
 m=int(input())
-m_arr = list(map(int,input().split()))
+m_arr = map(int,input().split())
 
-dict={}
-
-for i in n_arr:
-    if i in dict.keys():
-        pass
-    else:
-        dict[i]=1
-for i in m_arr:
-    if i in dict.keys():
-        print(1)
-    else:
+for target in m_arr:
+    if num_dict.get(target)==None:
         print(0)
+    else: print(1)
