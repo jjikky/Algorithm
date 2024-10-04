@@ -1,0 +1,1 @@
+const solution = (n) => [...Array(n+1).keys()].filter(v=>v%2==0).reduce((acc,cur)=>acc+cur);
