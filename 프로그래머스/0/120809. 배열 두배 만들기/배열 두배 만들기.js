@@ -1,0 +1,1 @@
+let solution = (arr) => arr.map((v,_)=> v*2);
