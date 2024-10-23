@@ -1,16 +1,17 @@
-import math
 def solution(p, s):
     answer = []
-    li = []
-    for i in range(len(p)):
-        li.append(math.ceil((100-p[i])/s[i]))
-        
-    target=0
-    
-    for i in range(len(li)):
-        if li[target]<li[i]:
-            answer.append(i-target)
-            target=i
-    answer.append(len(li)-target)
-            
+    day = 0
+    cnt = 0
+    while len(p)> 0:
+        if p[0]+day*s[0]>=100:
+            s.pop(0)
+            p.pop(0)
+            cnt+=1
+        else:
+            day+=1
+            if cnt > 0:
+                answer.append(cnt)
+                cnt = 0
+                
+    answer.append(cnt)
     return answer
