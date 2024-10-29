@@ -1,12 +1,11 @@
 function solution(sizes) {
-    const width = [];
-    const height = [];
-
-    for(let i = 0; i < sizes.length; i++) {
-        const max = Math.max(sizes[i][0], sizes[i][1]);
-        const min = Math.min(sizes[i][0], sizes[i][1]);
-        width.push(max);
-        height.push(min);
-    }
-    return Math.max(...width) * Math.max(...height);
+    let arr = sizes.map((v)=>v.sort((a,b)=>b-a))
+    let x=0,y=0
+    
+    arr.forEach(([a,b])=>{
+        if(a>x)x=a
+        if(b>y)y=b
+    })
+    
+    return x*y
 }
